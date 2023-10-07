@@ -1,5 +1,4 @@
 //jshint esversion:6
-
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
@@ -14,8 +13,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://muhammadhusnain:vzH8iZUxdPeNlTLQ@todolist-cluster.zwdtc7n.mongodb.net/todolistDB", { useNewUrlParser: true });
-
-const port = 3000;
 
 const itemSchema = {
   name: String
@@ -154,6 +151,8 @@ List.findOneAndUpdate({ name: listName }, { $pull: { items: { _id: checkedItemId
   });
 
   }
+
+  
 });
 
 
@@ -165,6 +164,6 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
+app.listen(4000, function() {
+  console.log("Server started on port 4000");
 });

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Muhammad Husnain",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -19,5 +19,6 @@
     "serverless-http": "^3.2.0"
   },
   "keywords": [],
+  "devDependencies": {},
   "description": ""
 }
