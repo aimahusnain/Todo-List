@@ -15,6 +15,8 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://muhammadhusnain:vzH8iZUxdPeNlTLQ@todolist-cluster.zwdtc7n.mongodb.net/todolistDB", { useNewUrlParser: true });
 
+const port = 3000;
+
 const itemSchema = {
   name: String
 }
@@ -165,6 +167,6 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
