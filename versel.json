@@ -1,15 +1,15 @@
 {
-    "version": 3,
+    "version": 4,
     "build":[
         {
-            "src": "index.js",
-            "use": "@now/node"
+            "src": "./index.js",
+            "use": "@versel/node"
         }
     ],
     "routes":[
         {
             "src": "/(.*)",
-            "dest": "index.js"
+            "dest": "/"
         }
     ]
 }
