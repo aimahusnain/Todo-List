@@ -1,10 +1,10 @@
 //jshint esversion:6
 
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const _ = require("lodash");
-const serverless = require('serverless-http');
+import express from "express";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import _ from "lodash";
+import serverless from "serverless-http";
 
 const app = express();
 
@@ -165,13 +165,6 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-const PORT = process.env.PORT || 3000
-
-app.listen(PORT, function() {
-  console.log("Server started on port $(PORT)");
+app.listen(3000, function() {
+  console.log("Server started on port 3000");
 });
-
-app.use('/.netlify/functions/api', router);
-module.exports.handler = serverless(app);
-
-//"build": "netlify deploy --prod"
